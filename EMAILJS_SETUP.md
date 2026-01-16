@@ -13,7 +13,7 @@ To enable the contact form functionality, you need to set up EmailJS. Follow the
 2. Click **Add New Service**
 3. Choose your email provider (Gmail recommended)
 4. Follow the connection steps
-5. Copy your **Service ID**//service_5i9msbc
+5. Copy your **Service ID**
 
 ## 3. Create Email Template
 
@@ -35,7 +35,7 @@ Message:
 This message was sent from your portfolio contact form.
 ```
 
-4. Copy your **Template ID**//template_42xe7ow
+4. Copy your **Template ID**
 
 ## 4. Get Your Public Key
 
@@ -48,9 +48,9 @@ This message was sent from your portfolio contact form.
 Open `/src/components/Contact/Contact.js` and replace these lines (around line 26-28):
 
 ```javascript
-const serviceID = "service_5i9msbc"; // Replace with your Service ID
-const templateID = "template_42xe7ow"; // Replace with your Template ID
-const publicKey = "fFFEUBSLszrEalkh-"; // Replace with your Public Key
+const serviceID = ""; // Replace with your Service ID
+const templateID = ""; // Replace with your Template ID
+const publicKey = ""; // Replace with your Public Key
 ```
 
 ## 6. Test the Contact Form
