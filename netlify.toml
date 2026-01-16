@@ -1,0 +1,8 @@
+[build]
+  command = "CI=false npm run build"
+  publish = "build"
+
+# Environment variables are configured in Netlify UI:
+# REACT_APP_EMAILJS_SERVICE_ID
+# REACT_APP_EMAILJS_TEMPLATE_ID  
+# REACT_APP_EMAILJS_PUBLIC_KEY
