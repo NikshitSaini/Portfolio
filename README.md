@@ -56,55 +56,6 @@ This portfolio was built using modern web technologies:
 
 ---
 
-## 🚀 Projects Featured
-
-### 1. Employee Shift Scheduler
-
-Full-stack web app with JWT authentication, role-based access control, and shift management.
-
-**Tech Stack:** Vite, React, Express, MongoDB, JWT, Vercel
-
-### 2. BookScout
-
-Full-stack mobile app for book reviews with authentication, community feeds, and image uploads.
-
-**Tech Stack:** React Native, Expo, Node.js, Express, MongoDB, Zustand, Cloudinary
-
-### 3. Bookify
-
-Multi-platform book browsing app with Backend-as-a-Service integration.
-
-**Tech Stack:** React Native, Appwrite, Expo Router, Zustand
-
-### 4. Daily Question Counter
-
-AI-powered LeetCode progress tracker with streak monitoring.
-
-**Tech Stack:** JavaScript, AI integration
-
----
-
-## 🏆 Achievements
-
-- 🧠 Solved **300+ DSA problems** on LeetCode
-- 🔥 **50-Day ×2 & 100-Day streak badges**
-- 🏅 **DCC March 2025 badge**
-- � **NVIDIA Fundamentals of Deep Learning** (2025)
-- 📜 **Agentic AI for Everyone** (2025)
-
----
-
-## 🎓 Education
-
-**B.E. Artificial Intelligence & Data Science**  
-D.Y. Patil College of Engineering, Pune  
-📊 CGPA: **8.69** (2023 – Present)
-
-**Class XII – Science Stream**  
-CBSE Board (2022)
-
----
-
 ## 🛠️ Installation and Setup
 
 ### Prerequisites

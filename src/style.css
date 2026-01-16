@@ -23,16 +23,16 @@ html {
 }
 
 @media (max-width: 767px) {
-    #preloader {
-      position: fixed;
-      top: 30%;
-      left: 20%;
-      width: 100%;
-      height: 100%;
-      z-index: 999999;
-      background-color: #ffffff;
-      background-repeat: no-repeat;
-      background-position: center;
+  #preloader {
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -811,7 +811,59 @@ html {
 }
 
 @media (max-width: 767px) {
-  .skill-tools-wrapper{
+  .skill-tools-wrapper {
     flex-direction: column;
   }
+}
+/* Contact Section Styles */
+.contact-section {
+  position: relative;
+  padding-top: 110px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: #414141 !important;
+}
+
+.contact-input {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(200, 137, 230, 0.637) !important;
+  color: #414141 !important;
+  padding: 12px !important;
+  border-radius: 5px !important;
+}
+
+.contact-input:focus {
+  background-color: rgba(255, 255, 255, 1) !important;
+  border-color: #c770f0 !important;
+  box-shadow: 0 0 0 0.2rem rgba(199, 112, 240, 0.25) !important;
+  color: #414141 !important;
+}
+
+.contact-input::placeholder {
+  color: rgba(65, 65, 65, 0.5) !important;
+}
+
+.contact-info h5 {
+  color: #c770f0;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  color: #414141;
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #a752ca !important;
+}
+
+label {
+  color: #414141 !important;
+  font-weight: 500;
+  margin-bottom: 8px;
 }

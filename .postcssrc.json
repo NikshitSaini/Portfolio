@@ -1,0 +1,7 @@
+{
+  "plugins": {
+    "autoprefixer": {
+      "ignoreWarnings": ["Replace color-adjust to print-color-adjust"]
+    }
+  }
+}
