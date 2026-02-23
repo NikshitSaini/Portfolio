@@ -4,6 +4,7 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import Achievements from "./Achievements";
 import Education from "./Education";
+import Experience from "./Experience";
 import developer from "../../Assets/developer.jpg";
 import { SKILLS, TOOLS } from "../../Constants";
 
@@ -20,29 +21,37 @@ function About() {
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }} className="fade-in">
               <strong className="purple">About Me</strong>
             </h1>
-            <Aboutcard />
+            <div className="fade-in fade-in-delay-2">
+              <Aboutcard />
+            </div>
           </Col>
-          <Col md={5} style={{ paddingBottom: "50px" }} className="about-img">
+          <Col md={5} style={{ paddingBottom: "50px" }} className="about-img fade-in fade-in-delay-3">
             <img src={developer} alt="about" className="image-style" />
+          </Col>
+        </Row>
+
+        <Row style={{ justifyContent: "center", paddingTop: "30px" }}>
+          <Col md={12} className="fade-in">
+            <Experience />
           </Col>
         </Row>
         
         <Row style={{ justifyContent: "center", paddingTop: "30px" }}>
-          <Col md={12}>
+          <Col md={12} className="fade-in">
             <Achievements />
           </Col>
         </Row>
 
         <Row style={{ justifyContent: "center", paddingTop: "30px" }}>
-          <Col md={12}>
+          <Col md={12} className="fade-in">
             <Education />
           </Col>
         </Row>
 
-        <Row className="skill-tools-wrapper">
+        <Row className="skill-tools-wrapper fade-in">
           <Col className="skill-wrapper">
             <h1 className="project-heading">
               Professional <strong className="purple">Skillset </strong>

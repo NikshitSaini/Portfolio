@@ -7,12 +7,14 @@ function Footer() {
   let year = date.getFullYear();
   return (
     <Container fluid className="footer">
-      <Row>
+      <Row style={{ alignItems: "center" }}>
         <Col md="4" className="footer-copywright">
-          <h3>Developed by Nikshit Saini</h3>
+          <h3>
+            Built with 💜 by <strong style={{ color: "var(--text-primary)" }}>Nikshit Saini</strong>
+          </h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} </h3>
+          <h3>Copyright © {year}</h3>
         </Col>
         <Col md="4" className="footer-body">
           <SocialMedia />

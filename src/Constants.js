@@ -3,6 +3,16 @@ import BOOKIFY from "./Assets/Projects/bookify.png";
 import DAILYQUESTION from "./Assets/Projects/dailyquestion.png";
 import EMPLOYEESHIFT from "./Assets/Projects/employee-shift.png";
 
+export const EXPERIENCE = [
+  {
+    company: "TeraForge Digital Lab",
+    role: "Software Development Intern",
+    duration: "Feb 2026 – Present",
+    ongoing: true,
+    description:
+      "Working on real-world software development projects, collaborating with the team on building and maintaining digital solutions. Gaining hands-on experience in full-stack development, code reviews, and agile workflows.",
+  },
+];
 
 export const PROJECTS = [
   {

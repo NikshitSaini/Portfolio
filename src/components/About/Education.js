@@ -12,20 +12,24 @@ function Education() {
       <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
         {EDUCATION.map((edu, index) => (
           <Col md={6} key={index} style={{ paddingBottom: "20px" }}>
-            <Card className="quote-card-view">
+            <Card className="education-card">
               <Card.Body>
-                <Card.Title style={{ fontWeight: "bold", color: "#c770f0" }}>
+                <Card.Title>
                   {edu.degree}
                 </Card.Title>
                 <Card.Subtitle className="mb-2" style={{ paddingTop: "10px" }}>
                   {edu.institution}
                 </Card.Subtitle>
-                <Card.Text style={{ paddingTop: "5px" }}>
-                  <strong>Duration:</strong> {edu.duration}
+                <Card.Text style={{ paddingTop: "8px" }}>
+                  <strong style={{ color: "var(--text-secondary)" }}>Duration:</strong>{" "}
+                  {edu.duration}
                 </Card.Text>
                 {edu.cgpa && (
                   <Card.Text>
-                    <strong>CGPA:</strong> {edu.cgpa}
+                    <strong style={{ color: "var(--text-secondary)" }}>CGPA:</strong>{" "}
+                    <span style={{ color: "var(--accent-primary)", fontWeight: "600" }}>
+                      {edu.cgpa}
+                    </span>
                   </Card.Text>
                 )}
               </Card.Body>

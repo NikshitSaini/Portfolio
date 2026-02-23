@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
 import { ACHIEVEMENTS } from "../../Constants";
 
 function Achievements() {
@@ -12,19 +11,17 @@ function Achievements() {
       <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
         {ACHIEVEMENTS.map((achievement, index) => (
           <Col md={4} className="achievement-card" key={index}>
-            <Card className="achievement-card-view">
-              <Card.Body>
-                <div style={{ fontSize: "3em", textAlign: "center", marginBottom: "10px" }}>
-                  {achievement.icon}
-                </div>
-                <Card.Title style={{ textAlign: "center", fontWeight: "bold" }}>
-                  {achievement.title}
-                </Card.Title>
-                <Card.Text style={{ textAlign: "center" }}>
-                  {achievement.description}
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <div className="achievement-card-view">
+              <div style={{ fontSize: "2.8em", textAlign: "center", marginBottom: "12px" }}>
+                {achievement.icon}
+              </div>
+              <div style={{ textAlign: "center", fontWeight: "700", fontSize: "1rem", marginBottom: "6px", color: "var(--text-primary)", fontFamily: "'Outfit', sans-serif" }}>
+                {achievement.title}
+              </div>
+              <div style={{ textAlign: "center", color: "var(--text-secondary)", fontSize: "0.9rem" }}>
+                {achievement.description}
+              </div>
+            </div>
           </Col>
         ))}
       </Row>

@@ -3,6 +3,8 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiOutlineMail, AiOutlinePhone, AiOutlineEnvironment } from "react-icons/ai";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Contact() {
   const form = useRef();
@@ -25,7 +27,6 @@ function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // EmailJS configuration - credentials stored in .env file
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
@@ -42,14 +43,9 @@ function Contact() {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
+            theme: "dark",
           });
-          // Reset form
-          setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-          });
+          setFormData({ name: "", email: "", subject: "", message: "" });
           setIsSubmitting(false);
         },
         (error) => {
@@ -61,6 +57,7 @@ function Contact() {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
+            theme: "dark",
           });
           setIsSubmitting(false);
         }
@@ -72,16 +69,16 @@ function Contact() {
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col md={7} style={{ paddingTop: "30px", paddingBottom: "50px" }}>
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+            <h1 style={{ fontSize: "2.1em", paddingBottom: "10px" }} className="fade-in">
               Get In <strong className="purple">Touch</strong>
             </h1>
-            <p style={{ color: "#414141", paddingBottom: "30px" }}>
+            <p style={{ color: "var(--text-secondary)", paddingBottom: "30px" }} className="fade-in fade-in-delay-1">
               Feel free to reach out to me for any inquiries, collaborations, or
               opportunities. I'm always excited to connect with like-minded
               individuals and explore new projects!
             </p>
 
-            <Form ref={form} onSubmit={handleSubmit}>
+            <Form ref={form} onSubmit={handleSubmit} className="fade-in fade-in-delay-2">
               <Row>
                 <Col md={6} className="mb-3">
                   <Form.Group controlId="formName">
@@ -156,66 +153,67 @@ function Contact() {
                     type="submit"
                     className="download-button"
                     disabled={isSubmitting}
+                    style={{ width: "100%", padding: "12px" }}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Sending..." : "Send Message ✉️"}
                   </Button>
                 </Col>
               </Row>
             </Form>
           </Col>
 
-          <Col md={5} className="contact-info" style={{ paddingTop: "30px" }}>
-            <h2 style={{ fontSize: "1.8em", paddingBottom: "20px" }}>
-              <strong className="purple">Contact Information</strong>
-            </h2>
-            
-            <div style={{ paddingBottom: "20px" }}>
-              <h5>📧 Email</h5>
-              <p>
-                <a
-                  href="mailto:nikshithansi@gmail.com"
-                  style={{ color: "#c770f0" }}
-                >
-                  nikshithansi@gmail.com
-                </a>
-              </p>
-            </div>
+          <Col md={5} className="contact-info fade-in fade-in-delay-3" style={{ paddingTop: "30px" }}>
+            <div className="contact-info-card">
+              <h2 style={{ fontSize: "1.6em", paddingBottom: "20px" }}>
+                <strong className="purple">Contact Information</strong>
+              </h2>
+              
+              <div style={{ paddingBottom: "20px" }}>
+                <h5><AiOutlineMail style={{ marginRight: "8px" }} />Email</h5>
+                <p>
+                  <a href="mailto:nikshithansi@gmail.com">
+                    nikshithansi@gmail.com
+                  </a>
+                </p>
+              </div>
 
-            <div style={{ paddingBottom: "20px" }}>
-              <h5>📱 Phone</h5>
-              <p>
-                <a href="tel:+919817255915" style={{ color: "#c770f0" }}>
-                  +91 9817255915
-                </a>
-              </p>
-            </div>
+              <div style={{ paddingBottom: "20px" }}>
+                <h5><AiOutlinePhone style={{ marginRight: "8px" }} />Phone</h5>
+                <p>
+                  <a href="tel:+919817255915">
+                    +91 9817255915
+                  </a>
+                </p>
+              </div>
 
-            <div style={{ paddingBottom: "20px" }}>
-              <h5>📍 Location</h5>
-              <p>Pune, India</p>
-            </div>
+              <div style={{ paddingBottom: "20px" }}>
+                <h5><AiOutlineEnvironment style={{ marginRight: "8px" }} />Location</h5>
+                <p>Pune, India</p>
+              </div>
 
-            <div style={{ paddingBottom: "20px" }}>
-              <h5>🌐 Social Links</h5>
-              <p>Connect with me on social media!</p>
-              <div style={{ marginTop: "10px" }}>
-                {/* Reuse SocialMedia component or add links */}
-                <a
-                  href="https://github.com/NikshitSaini"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ marginRight: "15px", fontSize: "1.5em" }}
-                >
-                  <i className="fab fa-github" style={{ color: "#c770f0" }}></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/nikshit12saini/"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ marginRight: "15px", fontSize: "1.5em" }}
-                >
-                  <i className="fab fa-linkedin" style={{ color: "#c770f0" }}></i>
-                </a>
+              <div style={{ paddingBottom: "10px" }}>
+                <h5>🌐 Social Links</h5>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>Connect with me on social media!</p>
+                <div style={{ display: "flex", gap: "12px", marginTop: "10px" }}>
+                  <a
+                    href="https://github.com/NikshitSaini"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-social-icons"
+                    style={{ width: "45px", height: "45px", display: "inline-flex", alignItems: "center", justifyContent: "center" }}
+                  >
+                    <FaGithub style={{ fontSize: "1.2em", color: "var(--text-secondary)" }} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/nikshit12saini/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-social-icons"
+                    style={{ width: "45px", height: "45px", display: "inline-flex", alignItems: "center", justifyContent: "center" }}
+                  >
+                    <FaLinkedin style={{ fontSize: "1.2em", color: "var(--text-secondary)" }} />
+                  </a>
+                </div>
               </div>
             </div>
           </Col>

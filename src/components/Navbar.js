@@ -10,8 +10,6 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 
-import { MdDeveloperMode } from "react-icons/md";
-
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
@@ -37,7 +35,17 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" onClick={() => updateExpanded(false)}>
-          <MdDeveloperMode style={{ marginBottom: "2px" }} /> Nikshit Saini
+          <span style={{ 
+            background: "linear-gradient(135deg, #8b5cf6, #06b6d4)", 
+            WebkitBackgroundClip: "text", 
+            WebkitTextFillColor: "transparent",
+            fontFamily: "'Outfit', sans-serif",
+            fontWeight: 800,
+            fontSize: "1.3rem"
+          }}>
+            {"<NS />"}
+          </span>
+          <span style={{ marginLeft: "8px" }}>Nikshit Saini</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -99,8 +107,6 @@ function NavBar() {
                 <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
-
-
           </Nav>
         </Navbar.Collapse>
       </Container>
